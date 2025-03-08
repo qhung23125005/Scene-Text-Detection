@@ -1,6 +1,6 @@
-import torch
 import torch.nn as nn
 import timm
+import torch
 
 class CRNN(nn.Module):
     def __init__(self, vocab_size, hidden_size, n_layers,
@@ -36,7 +36,6 @@ class CRNN(nn.Module):
             nn.LogSoftmax(dim=2)
         )
 
-    @torch.autocast(device_type ="cuda")
     def forward(self, x):
         x = self.backbone(x)
         x = x.permute(0, 3, 1, 2)
