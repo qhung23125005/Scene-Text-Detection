@@ -8,7 +8,7 @@ clean:
 
 init:
 	@if not exist tmp\ray_project mkdir tmp\ray_project
-	@ray start --head --disable-usage-stats --temp-dir="$(CURDIR)\tmp\ray_project" --dashboard-host=0.0.0.0
+	@ray start --head --disable-usage-stats --temp-dir="$(CURDIR)\tmp\ray_project" --dashboard-host=0.0.0.0 
 
 deploy_ocr:
 	@echo Starting OCR server...

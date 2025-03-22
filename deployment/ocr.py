@@ -233,4 +233,3 @@ entrypoint = APIIngress.bind(
         det_model=det_model,
     )
 )
-
